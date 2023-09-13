@@ -1,0 +1,283 @@
+{
+  "users": [
+    {
+      "username": "zak",
+      "password": "$2b$10$6/dTcCveW7x8.yHrV5Voueg4PpzBdAg7pOsImkvAhs6a6DCGCe1qu",
+      "email": "zakaria@gmail.com",
+      "avatar": "image-1694517295119-189585002.png",
+      "id": 1
+    },
+    {
+      "username": "bahyxyp",
+      "password": "$2b$10$Zde2aUk9bxWJ.PvAToBGOO4tZ9VOAezUVt4y/URZQ7nFSponGQ9p.",
+      "email": "myfuxyjew@mailinator.com",
+      "avatar": "image-1694598681573-149941878.jpg",
+      "id": 2
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "title": "ppppppppppppp",
+      "content": "<div><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br></strong><br></div><h1><strong>hmd</strong></h1><ol><li>wld hmad</li></ol>",
+      "image": "image1.jpg",
+      "slug": "lorem-ipsum-blog-1",
+      "is_public": "on",
+      "createdAt": "2023-09-13T17:12:11.934Z",
+      "updatedAt": "2023-09-12T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "user_id": 1,
+      "title": "Lorem Ipsum Blog 2",
+      "content": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "image": "image2.jpg",
+      "slug": "lorem-ipsum-blog-2",
+      "is_public": true,
+      "createdAt": "2023-09-13T09:45:00Z",
+      "updatedAt": "2023-09-13T10:15:00Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "title": "Lorem Ipsum Blog 3",
+      "content": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "image": "image3.jpg",
+      "slug": "lorem-ipsum-blog-3",
+      "is_public": false,
+      "createdAt": "2023-09-14T14:20:00Z",
+      "updatedAt": "2023-09-14T15:00:00Z"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "title": "Another Blog 1",
+      "content": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+      "image": "image4.jpg",
+      "slug": "another-blog-1",
+      "is_public": true,
+      "createdAt": "2023-09-15T11:30:00Z",
+      "updatedAt": "2023-09-15T12:15:00Z"
+    },
+    {
+      "id": 5,
+      "user_id": 2,
+      "title": "Another Blog 2",
+      "content": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "image": "image5.jpg",
+      "slug": "another-blog-2",
+      "is_public": true,
+      "createdAt": "2023-09-16T13:45:00Z",
+      "updatedAt": "2023-09-16T14:10:00Z"
+    },
+    {
+      "title": "Sunt ullam sunt nost",
+      "content": "<div>Ad id, ab labore id .</div>",
+      "createdAt": "2023-09-13T08:39:03.526Z",
+      "id": 6
+    },
+    {
+      "title": "",
+      "content": "",
+      "createdAt": "2023-09-13T08:50:05.049Z",
+      "id": 7
+    },
+    {
+      "title": "Consequatur laborum",
+      "content": "<div>Totam iusto eiusmod .</div>",
+      "createdAt": "2023-09-13T09:08:33.771Z",
+      "id": 8
+    },
+    {
+      "user_id": 1,
+      "title": "Eiusmod ut fuga Ver",
+      "slug": "Eiusmod-ut-fuga-Ver",
+      "content": "<div>Reprehenderit nulla .</div>",
+      "image": null,
+      "createdAt": "2023-09-13T10:02:42.631Z",
+      "updatedAt": null,
+      "id": 9
+    },
+    {
+      "user_id": 1,
+      "title": "Optio ut velit minu",
+      "slug": "Optio-ut-velit-minu",
+      "content": "<div>Praesentium animi, p.</div>",
+      "image": null,
+      "createdAt": "2023-09-13T10:09:16.249Z",
+      "updatedAt": null,
+      "id": 10
+    },
+    {
+      "user_id": 1,
+      "title": "Corrupti culpa seq",
+      "slug": "Corrupti-culpa-seq",
+      "content": "<div>Non hic vel voluptat.</div>",
+      "image": "image-1694599998563-787355851.mov",
+      "createdAt": "2023-09-13T10:13:18.628Z",
+      "updatedAt": null,
+      "id": 11
+    },
+    {
+      "user_id": 1,
+      "title": "Ea temporibus nulla ",
+      "slug": "Ea-temporibus-nulla",
+      "content": "<div>Alias hic quibusdam .</div>",
+      "image": "image-1694600053888-432724278.jpg",
+      "createdAt": "2023-09-13T10:14:13.898Z",
+      "updatedAt": null,
+      "id": 12
+    },
+    {
+      "user_id": 1,
+      "title": "Consequat Ipsam eni",
+      "slug": "Consequat-Ipsam-eni",
+      "content": "<div>Ex non ex laboris co.</div>",
+      "image": "image-1694600274624-903073967.png",
+      "createdAt": "2023-09-13T10:17:54.633Z",
+      "updatedAt": null,
+      "id": 13
+    },
+    {
+      "user_id": 1,
+      "title": "Proident est nemo ",
+      "slug": "Proident-est-nemo",
+      "content": "<div>Est, possimus, et as.</div>",
+      "image": null,
+      "createdAt": "2023-09-13T10:18:32.083Z",
+      "updatedAt": null,
+      "id": 14
+    },
+    {
+      "user_id": 1,
+      "title": "Non duis corrupti p",
+      "slug": "Non-duis-corrupti-p",
+      "content": "<div>Voluptas eveniet, su.</div>",
+      "image": null,
+      "createdAt": "2023-09-13T10:18:47.726Z",
+      "updatedAt": null,
+      "id": 15
+    },
+    {
+      "user_id": 1,
+      "title": "Ut dolor autem debit",
+      "slug": "Ut-dolor-autem-debit",
+      "content": "<div>Quis harum est, vel .</div>",
+      "image": "image-1694600343505-253026584.png",
+      "createdAt": "2023-09-13T10:19:03.511Z",
+      "updatedAt": null,
+      "id": 16
+    },
+    {
+      "user_id": 1,
+      "title": "Esse ratione est qu",
+      "slug": "Esse-ratione-est-qu",
+      "content": "<div>Totam anim facilis d.</div>",
+      "image": "image-1694600491352-850427788.jpg",
+      "is_public": true,
+      "createdAt": "2023-09-13T10:21:31.368Z",
+      "updatedAt": null,
+      "id": 17
+    },
+    {
+      "user_id": 1,
+      "title": "Deleniti eaque volup",
+      "slug": "Deleniti-eaque-volup",
+      "content": "<div>Tempore, et enim iur.</div>",
+      "image": "image-1694600512465-810184626.png",
+      "is_public": false,
+      "createdAt": "2023-09-13T10:21:52.471Z",
+      "updatedAt": null,
+      "id": 18
+    },
+    {
+      "user_id": 2,
+      "title": "Consequatur Aute do",
+      "slug": "Consequatur-Aute-do",
+      "content": "<div>Quis dignissimos non.</div>",
+      "image": "image-1694600637746-723356290.jpg",
+      "is_public": false,
+      "createdAt": "2023-09-13T10:23:57.753Z",
+      "updatedAt": null,
+      "id": 19
+    },
+    {
+      "user_id": 1,
+      "title": "Ab minim voluptate a",
+      "slug": "Ab-minim-voluptate-a",
+      "content": "<div>Dolore quae at illum.</div>",
+      "image": "image-1694601065290-602569785.jpg",
+      "is_public": true,
+      "createdAt": "2023-09-13T10:31:05.297Z",
+      "updatedAt": null,
+      "id": 20
+    },
+    {
+      "user_id": 1,
+      "title": "Ab minim voluptate a",
+      "slug": "Ab-minim-voluptate-a",
+      "content": "<div>Dolore quae at illum.</div>",
+      "image": null,
+      "is_public": true,
+      "createdAt": "2023-09-13T13:02:12.792Z",
+      "updatedAt": null,
+      "id": 21
+    },
+    {
+      "user_id": 1,
+      "title": "Ab minim voluptate a",
+      "slug": "Ab-minim-voluptate-a",
+      "content": "<div>Dolore quae at illum.</div>",
+      "image": null,
+      "is_public": true,
+      "createdAt": "2023-09-13T13:22:22.030Z",
+      "updatedAt": null,
+      "id": 22
+    },
+    {
+      "user_id": 1,
+      "title": "Ab minim voluptate a",
+      "slug": "Ab-minim-voluptate-a",
+      "content": "<div>Dolore quae at illum.</div>",
+      "image": null,
+      "is_public": true,
+      "createdAt": "2023-09-13T13:23:03.372Z",
+      "updatedAt": null,
+      "id": 23
+    },
+    {
+      "user_id": 1,
+      "title": "Ab minim voluptate a",
+      "slug": "Ab-minim-voluptate-a",
+      "content": "<div>Dolore quae at illum.</div>",
+      "image": null,
+      "is_public": true,
+      "createdAt": "2023-09-13T13:24:07.583Z",
+      "updatedAt": null,
+      "id": 24
+    },
+    {
+      "user_id": 1,
+      "title": "Eius laboris fugit ",
+      "slug": "Eius-laboris-fugit",
+      "content": "<div>Voluptatum irure nis.</div>",
+      "image": "image-1694623202202-502714089.jpg",
+      "is_public": true,
+      "createdAt": "2023-09-13T16:40:02.215Z",
+      "updatedAt": null,
+      "id": 25
+    },
+    {
+      "user_id": 1,
+      "title": "Proident velit dolo",
+      "slug": "Proident-velit-dolo",
+      "content": "<div>Dolor qui excepteur .</div>",
+      "image": "image-1694623240545-620010255.jpg",
+      "is_public": "on",
+      "createdAt": "2023-09-13T16:42:16.841Z",
+      "updatedAt": null,
+      "id": 26
+    }
+  ]
+}

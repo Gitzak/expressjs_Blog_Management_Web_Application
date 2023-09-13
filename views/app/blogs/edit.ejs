@@ -1,0 +1,79 @@
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.0/dist/trix.css" />
+<script type="text/javascript" src="https://unpkg.com/trix@2.0.0/dist/trix.umd.min.js"></script>
+<style>
+    .trix-button-group.trix-button-group--file-tools {
+        display: none;
+    }
+    .trix-content {
+        min-height: 350px;
+    }
+    trix-editor {
+        border: 1px solid #d1d3e2;
+    }
+</style>
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Edit blog</h1>
+        <a href="/blogs/" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-arrow-left fa-sm text-white-50"></i> Back</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mb-3">
+            <% if (message.success !== null && message.success !== undefined) { %>
+            <div class="alert alert-success" role="alert"><%= message.success %></div>
+            <% } %>
+        </div>
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary"><%= blog.title %></h6>
+                </div>
+                <div class="card-body">
+                    <form class="user" action="/blogs/edit/<%= blog.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-12">
+                                <div class="input-group mb-3">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control form-control-user" id="title" name="title" placeholder="Title" value="<%= blog.title %>" style="border-radius: 5px" />
+                                    </div>
+                                    <div class="text-danger"><% if (errors && errors.some(error => error.path === 'title')) { %> <%= errors.find(error => error.path === 'title').msg %> <% } %></div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group">
+                                        <input id="x" value="<%= blog.content %>" type="hidden" name="content" />
+                                        <trix-editor class="d-block w-100 trix-content" input="x"></trix-editor>
+                                    </div>
+                                    <div class="text-danger"><% if (errors && errors.some(error => error.path === 'content')) { %> <%= errors.find(error => error.path === 'content').msg %> <% } %></div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-sm-12">
+                                <div class="input-group mb-5">
+                                    <img class="img-fluid" src="/img/blogs/<%= blog.image %>" alt="" />
+                                    <div class="input-group">
+                                        <input class="form-control" type="file" id="image" name="image" style="height: 50px; padding: 9px 13px" />
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group border border-1 p-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="is_public" name="is_public" <%= blog.is_public == true ? 'checked' : '' %> />
+                                            <label class="form-check-label" for="is_public"> Make it public </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-user px-4 shadow-sm">Edit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    // prevents attachments:
+    document.addEventListener("trix-file-accept", function (event) {
+        event.preventDefault();
+    });
+</script>

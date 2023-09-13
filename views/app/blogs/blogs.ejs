@@ -1,0 +1,110 @@
+<style>
+    .table-responsive {
+        overflow-x: visible;
+    }
+</style>
+<div class="container-fluid">
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Blogs</h1>
+        <a href="/blogs/create" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i class="fas fa-plus fa-sm text-white-50"></i> Add new post</a>
+    </div>
+
+    <div class="row">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Blogs</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800"><%= totalBlogs %></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-newspaper fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">List of blogs</h6>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <div id="dataTable_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%">
+                                        <thead>
+                                            <tr role="row">
+                                                <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 25%" aria-sort="ascending">Tile</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%">slug</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 10%">State</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%">Date</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <% blogs.forEach(blog => { %>
+                                            <tr class="odd">
+                                                <td><%= blog.title %></td>
+                                                <td><%= blog.slug %></td>
+                                                <% if (blog.is_public) { %>
+                                                <td><span class="badge rounded-pill bg-success p-2 px-3 text-white">Public</span></td>
+                                                <% } else { %>
+                                                <td><span class="badge rounded-pill bg-danger p-2 px-3 text-white">Private</span></td>
+                                                <% } %>
+                                                <td><%= moment(blog.createdAt).format("MMMM Do YYYY, h:mm") %></td>
+                                                <td>
+                                                    <a href="/blogs/edit/<%= blog.id %>" class="btn btn-warning btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-pen"></i>
+                                                        </span>
+                                                        <span class="text">Edit</span>
+                                                    </a>
+                                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-trash"></i>
+                                                        </span>
+                                                        <span class="text">Delete</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <% }) %>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+                                        <ul class="pagination">
+                                            <% if (parseInt(currentPage) > 1) { %>
+                                            <li class="paginate_button page-item previous" id="dataTable_previous">
+                                                <a href="?page=<%= parseInt(currentPage) - 1 %>" aria-controls="dataTable" tabindex="0" class="page-link">Previous</a>
+                                            </li>
+                                            <% } %> <% for (let i = 1; i <= totalPages; i++) { %>
+                                            <li class="paginate_button page-item <%= parseInt(currentPage) === i ? 'active' : '' %>">
+                                                <a href="?page=<%= i %>" aria-controls="dataTable" tabindex="0" class="page-link"><%= i %></a>
+                                            </li>
+                                            <% } %> <% if (parseInt(currentPage) < totalPages) { %>
+                                            <li class="paginate_button page-item next" id="dataTable_next">
+                                                <a href="?page=<%= parseInt(currentPage) + 1 %>" aria-controls="dataTable" tabindex="0" class="page-link">Next</a>
+                                            </li>
+                                            <% } %>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
