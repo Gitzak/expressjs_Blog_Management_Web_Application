@@ -29,5 +29,7 @@ blogsRoutes.put('/edit/:id', upload.single('image'), requireAuthMiddleware, [
     check('content').notEmpty().withMessage('Content is required'),
 ], blogsController.editBlog);
 
+blogsRoutes.post('/delete/:id', requireAuthMiddleware, blogsController.deleteBlog);
+
 // Export the adminRouter for use in the application
 module.exports = blogsRoutes;

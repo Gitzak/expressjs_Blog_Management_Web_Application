@@ -49,7 +49,9 @@
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <div class="input-group mb-5">
-                                    <img class="img-fluid" src="/img/blogs/<%= blog.image %>" alt="" />
+                                    <% if (blog.image) { %>
+                                        <img class="img-fluid" src="/img/blogs/<%= blog.image %>" alt="" />
+                                    <% } %>
                                     <div class="input-group">
                                         <input class="form-control" type="file" id="image" name="image" style="height: 50px; padding: 9px 13px" />
                                     </div>

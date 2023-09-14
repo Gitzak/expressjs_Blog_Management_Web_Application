@@ -5,7 +5,6 @@ const dotenv = require('dotenv');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const expressLayout = require('express-ejs-layouts');
-const fs = require('fs');
 const path = require('path');
 const methodOverride = require('method-override');
 const flash = require('connect-flash')

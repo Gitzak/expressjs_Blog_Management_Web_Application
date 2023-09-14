@@ -14,7 +14,6 @@ async function checkAuthenticated(req, res, next) {
         try {
             const response = await axios.get(urlUsers);
             const users = response.data;
-
             jwt.verify(req.cookies.token_jwt, secretKey, (err, decoded) => {
                 if (err) {
                     next();
@@ -26,7 +25,6 @@ async function checkAuthenticated(req, res, next) {
                 }
             });
         } catch (error) {
-            console.error(error);
             next();
         }
     } else {
@@ -89,8 +87,12 @@ async function registerUser(req, res) {
 
         res.redirect('/dashboard');
     } catch (error) {
-        console.error(error);
-        res.render('error', { message: 'Registration failed', layout: 'layouts/main' });
+        res.status(500).render('errors/error', {
+            type: 500,
+            message: 'Internal Server Error',
+            text: 'An internal server error occurred.',
+            layout: false
+        });
     }
 }
 
@@ -151,8 +153,12 @@ async function loginUser(req, res) {
 
         res.redirect('/blogs');
     } catch (error) {
-        console.error(error);
-        res.render('error', { message: 'Login failed', layout: 'layouts/main' });
+        res.status(500).render('errors/error', {
+            type: 500,
+            message: 'Internal Server Error',
+            text: 'An internal server error occurred.',
+            layout: false
+        });
     }
 }
 

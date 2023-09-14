@@ -42,37 +42,43 @@
                                     <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%">
                                         <thead>
                                             <tr role="row">
-                                                <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 25%" aria-sort="ascending">Tile</th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%">slug</th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 10%">State</th>
+                                                <th class="sorting sorting_asc" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Name: activate to sort column descending" style="width: 5%" aria-sort="ascending">Image</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending" style="width: 25%">Title</th>
+                                                <th class="sorting text-center" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="width: 8%">State</th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%">Date</th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 20%">Action</th>
+                                                <th class="sorting" tabindex="0" aria-controls="dataTable" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="width: 18%">Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <% blogs.forEach(blog => { %>
-                                            <tr class="odd">
+                                            <tr data-row="row-<%= blog.id %>" class="odd">
+                                                <td>
+                                                    <% if (blog.image) { %>
+                                                    <img class="img-fluid" width="100" src="/img/blogs/<%= blog.image %>" alt="<%= blog.title %>" />
+                                                    <% } else { %>
+                                                    <img class="img-fluid" width="100" src="/img/blogs/no_image.jpg" alt="No Picture" />
+                                                    <% } %>
+                                                </td>
                                                 <td><%= blog.title %></td>
-                                                <td><%= blog.slug %></td>
                                                 <% if (blog.is_public) { %>
-                                                <td><span class="badge rounded-pill bg-success p-2 px-3 text-white">Public</span></td>
+                                                <td class="text-center"><span class="badge rounded-pill bg-success p-2 px-3 text-white">Public</span></td>
                                                 <% } else { %>
-                                                <td><span class="badge rounded-pill bg-danger p-2 px-3 text-white">Private</span></td>
+                                                <td class="text-center"><span class="badge rounded-pill bg-danger p-2 px-3 text-white">Private</span></td>
                                                 <% } %>
                                                 <td><%= moment(blog.createdAt).format("MMMM Do YYYY, h:mm") %></td>
-                                                <td>
+                                                <td class="text-center">
                                                     <a href="/blogs/edit/<%= blog.id %>" class="btn btn-warning btn-icon-split">
                                                         <span class="icon text-white-50">
                                                             <i class="fas fa-pen"></i>
                                                         </span>
                                                         <span class="text">Edit</span>
                                                     </a>
-                                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                                    <button onclick="confirmDelete('<%= blog.id %>')" class="btn btn-danger btn-icon-split">
                                                         <span class="icon text-white-50">
                                                             <i class="fas fa-trash"></i>
                                                         </span>
                                                         <span class="text">Delete</span>
-                                                    </a>
+                                                    </button>
                                                 </td>
                                             </tr>
                                             <% }) %>
@@ -108,3 +114,39 @@
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script>
+    function confirmDelete(blogId) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!",
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                try {
+                    const response = await fetch(`/blogs/delete/${blogId}`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    });
+                    if (response.ok) {
+                        const deletedRow = document.querySelector(`[data-row="row-${blogId}"]`);
+                        if (deletedRow) {
+                            deletedRow.remove();
+                        }
+                        Swal.fire("Deleted!", "The blog has been deleted.", "success");
+                    } else {
+                        Swal.fire("Error", "An error occurred while deleting the blog.", "error");
+                    }
+                } catch (error) {
+                    Swal.fire("Error", "An error occurred while deleting the blog.", "error");
+                }
+            }
+        });
+    }
+</script>
