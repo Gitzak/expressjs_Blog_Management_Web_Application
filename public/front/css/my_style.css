@@ -1,0 +1,9 @@
+.btn-check:checked+.btn, :not(.btn-check)+.btn:active, .btn:first-child:active, .btn.active, .btn.show {
+    color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.ar-font {
+    font-family: 'Cairo', sans-serif;
+}

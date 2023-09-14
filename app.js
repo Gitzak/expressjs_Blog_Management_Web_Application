@@ -58,6 +58,9 @@ app.use('/dashboard', adminRoutes);
 const blogsRoutes = require('./routes/blogsRoutes');
 app.use('/blogs', blogsRoutes);
 
+const articlesRoutes = require('./routes/articlesRoutes');
+app.use('/articles', articlesRoutes);
+
 // Start the server on port 3000
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
