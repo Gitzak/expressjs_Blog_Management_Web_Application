@@ -55,9 +55,9 @@
                                             <tr data-row="row-<%= blog.id %>" class="odd">
                                                 <td>
                                                     <% if (blog.image) { %>
-                                                    <img class="img-fluid" width="100" src="/img/blogs/<%= blog.image %>" alt="<%= blog.title %>" />
+                                                    <img class="img-fluid" width="100" src="/img/posts/<%= blog.image %>" alt="<%= blog.title %>" />
                                                     <% } else { %>
-                                                    <img class="img-fluid" width="100" src="/img/blogs/no_image.jpg" alt="No Picture" />
+                                                    <img class="img-fluid" width="100" src="/img/posts/no_image.jpg" alt="No Picture" />
                                                     <% } %>
                                                 </td>
                                                 <td><%= blog.title %></td>

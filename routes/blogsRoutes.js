@@ -14,7 +14,7 @@ blogsRoutes.get('/', requireAuthMiddleware, blogsController.renderBlogs);
 
 blogsRoutes.get('/create', requireAuthMiddleware, blogsController.renderCreateBlog);
 
-const destinationPath = '../public/img/blogs';
+const destinationPath = '../public/img/posts';
 const upload = configureStorage(destinationPath);
 
 blogsRoutes.post('/add-blog', upload.single('image'), requireAuthMiddleware, [

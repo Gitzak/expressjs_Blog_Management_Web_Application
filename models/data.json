@@ -55,6 +55,13 @@
       "email": "qusisyzid@mailinator.com",
       "avatar": "image-1694767808341-135536958.jpg",
       "id": 8
+    },
+    {
+      "username": "vijalopyr",
+      "password": "$2b$10$B/fOFyXeFCCwuIOryW3k3.snaZpTQQFOlCAH5a7fDT1YoGv7srgZS",
+      "email": "naxizusogy@mailinator.com",
+      "avatar": "image-1694787325071-885609180.png",
+      "id": 9
     }
   ],
   "blogs": [
@@ -273,6 +280,18 @@
       "updatedAt": null,
       "deletedAt": null,
       "id": 19
+    },
+    {
+      "user_id": 9,
+      "title": "Dolorem repellendus",
+      "slug": "Dolorem-repellendus",
+      "content": "<div>Commodo obcaecati vo.</div>",
+      "image": "image-1694787341850-115944034.jpg",
+      "is_public": true,
+      "createdAt": "2023-09-15T14:15:41.861Z",
+      "updatedAt": null,
+      "deletedAt": null,
+      "id": 20
     }
   ]
 }

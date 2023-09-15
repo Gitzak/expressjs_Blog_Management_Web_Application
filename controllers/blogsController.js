@@ -164,9 +164,9 @@ async function editBlog(req, res, next) {
         const image = req.file;
 
         if (image !== undefined) {
-            fs.access(path.join(__dirname, './../public/img/blogs/') + blog.image, fs.constants.F_OK, (err) => {
+            fs.access(path.join(__dirname, './../public/img/posts/') + blog.image, fs.constants.F_OK, (err) => {
                 if (!err) {
-                    fs.unlink(path.join(__dirname, './../public/img/blogs/') + blog.image, (unlinkErr) => {
+                    fs.unlink(path.join(__dirname, './../public/img/posts/') + blog.image, (unlinkErr) => {
                         if (unlinkErr) {
                             req.flash('danger', 'An error has occurred please try again later');
                             return res.redirect(`/blogs/edit/${blog_id}`);

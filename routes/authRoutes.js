@@ -10,7 +10,7 @@ const authRouter = express.Router();
 // Define routes for registration
 authRouter.get('/register', authController.checkAuthenticated, authController.renderRegisterPage);
 
-const destinationPath = '../public/img/avatar';
+const destinationPath = '../public/img/avatars';
 const upload = configureStorage(destinationPath);
 authRouter.post('/register', upload.single('image'), [
     check('username').notEmpty().withMessage('Username is required'),
