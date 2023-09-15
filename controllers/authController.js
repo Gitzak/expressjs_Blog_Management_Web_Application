@@ -76,7 +76,11 @@ async function registerUser(req, res) {
             avatar: avatar ? avatar.filename : null,
         };
 
-        await axios.post(urlUsers, newUser);
+        const responseUser = await axios.post(urlUsers, newUser);
+        const userId = responseUser.data.id;
+        newUser.id = userId;
+
+        delete newUser.password;
 
         const sessionId = req.session.sid;
 
@@ -85,8 +89,9 @@ async function registerUser(req, res) {
 
         req.session.auth = true;
 
-        res.redirect('/dashboard');
+        res.redirect('/blogs');
     } catch (error) {
+        console.log(error);
         res.status(500).render('errors/error', {
             type: 500,
             message: 'Internal Server Error',

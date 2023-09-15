@@ -73,6 +73,8 @@ async function addBlog(req, res) {
             return res.render('app/blogs/create', { errors: errors.array(), message: '', locals, user: req.decoded.user });
         }
 
+        // console.log(req.decoded.user);
+
         const { title, content, is_public } = req.body;
         const image = req.file;
 
@@ -129,11 +131,12 @@ async function renderEditBlog(req, res) {
     const blog_id = req.params.id;
     const user_id = req.decoded.user.id;
     const blogResponse = await axios.get(`http://localhost:3000/blogs?id=${blog_id}&user_id=${user_id}`);
-    const blog = blogResponse.data[0];
-
-    if (!blog) {
-        res.status(404).render('errors/error', { type: 404, message: 'Page not found.', text: 'The page you\'re looking for doesn\'t exist.', layout: false });
+    
+    if(blogResponse.data[0] == undefined){
+        return res.status(404).render('errors/error', { type: 404, message: 'Page not found.', text: 'The page you\'re looking for doesn\'t exist.', layout: false });
     }
+    
+    const blog = blogResponse.data[0];
 
     const m = req.flash('success');
 

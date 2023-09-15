@@ -8,11 +8,53 @@
       "id": 1
     },
     {
-      "username": "bahyxyp",
-      "password": "$2b$10$Zde2aUk9bxWJ.PvAToBGOO4tZ9VOAezUVt4y/URZQ7nFSponGQ9p.",
-      "email": "myfuxyjew@mailinator.com",
-      "avatar": "image-1694598681573-149941878.jpg",
+      "username": "nupovony",
+      "password": "$2b$10$kKb2q02wpPxjlGcZ.pD9l.a4wXmTlPHrgxeVjcsCkMkJLbVLLwJXa",
+      "email": "cawisazyf@mailinator.com",
+      "avatar": "image-1694766689045-747910528.jpg",
       "id": 2
+    },
+    {
+      "username": "cuturos",
+      "password": "$2b$10$DB.i7BdJKF.RsYy6HISf..fLZ7z7gBG4.0BYtAejlV/gylRVsfjia",
+      "email": "didiket@mailinator.com",
+      "avatar": null,
+      "id": 3
+    },
+    {
+      "username": "fygovujy",
+      "password": "$2b$10$7e3bAIgX16GvYqw7sUz1JuETbDrvxHj1Q0ZiaVrWMEUCwWU2eKBWq",
+      "email": "bybutyhyq@mailinator.com",
+      "avatar": "image-1694767076904-970413400.jpg",
+      "id": 4
+    },
+    {
+      "username": "vyrabe",
+      "password": "$2b$10$.iCfIYYPg8pAmcepSpNX3O0AO0di3uTAFVHwmfagLBYTJ2MW4UOfC",
+      "email": "cegetegexy@mailinator.com",
+      "avatar": "image-1694767109940-252886230.jpg",
+      "id": 5
+    },
+    {
+      "username": "mivofu",
+      "password": "$2b$10$yjFZCIszTXSBbaxuTMtIG.ba8meXoeKWfAy.MIHe1Q/JVI7FfhTJ6",
+      "email": "beju@mailinator.com",
+      "avatar": "image-1694767411548-726600920.jpg",
+      "id": 6
+    },
+    {
+      "username": "fulaviqi",
+      "password": "$2b$10$YsBelrDJmHxUMrhMW5T/duN3daFfws4pfl9SllviuDXXpdlD2JTZq",
+      "email": "cyhynizib@mailinator.com",
+      "avatar": null,
+      "id": 7
+    },
+    {
+      "username": "gupihuza",
+      "password": "$2b$10$CrKLFO5dzOxl2V4jDZbm3eIvYqhghVoFnY2lCctKXgVtjYrxjENxu",
+      "email": "qusisyzid@mailinator.com",
+      "avatar": "image-1694767808341-135536958.jpg",
+      "id": 8
     }
   ],
   "blogs": [
@@ -174,13 +216,13 @@
     },
     {
       "user_id": 1,
-      "title": "Why I quit open source",
+      "title": "Why I quit open source hhhhhh",
       "slug": "Quidem-aliqua-Dolor",
       "content": "<div><strong>GitHub published </strong>a curious <a href=\"https://opensource.guide/maintaining-balance-for-open-source-maintainers/\">article on avoiding burnout</a> for open source maintainers. It’s an important topic that should be discussed more widely, and I appreciate that GitHub <strong><em>published</em></strong> it.</div><div>The article has a good overview of possible burnout reasons, and gives some suggestions on how to avoid it. However, I feel that the main goal of the article is to convince maintainers to keep doing what they are doing for as long as possible, meaning to keep working for free. The article briefly mentions sponsoring but for most maintainers it’s unrealistic to rely on sponsoring or donations.</div><div>I think the most healthy solution for avoiding maintainer burnout is <em>quitting open source entirely</em>, at least it was a solution that worked for me. Unfortunately, I had to reach the state of burnout myself to understand that, and then it took me long time to recover (or replace maintainer burnout with a burnout in other areas of my life).</div><div>I’ve talked before <a href=\"https://sapegin.me/blog/ex-open-source/\">on why open source was attractive to me</a>, and a bit on why I <a href=\"https://sapegin.me/blog/no-complaints-oss/\">was contributing less</a>, and eventually <a href=\"https://sapegin.me/blog/going-offline/\">quit open source</a>.</div><div>In this article I want to talk more about the reasons that led me to maintainer burnout, and to quitting open source after about ten years of contributing regularly, and publishing many projects.</div>",
       "image": "image-1694681361234-966915528.jpg",
       "is_public": false,
       "createdAt": "2023-09-14T08:49:21.251Z",
-      "updatedAt": "2023-09-14T10:42:49.302Z",
+      "updatedAt": "2023-09-15T07:54:46.568Z",
       "deletedAt": null,
       "id": 14
     },
@@ -193,7 +235,7 @@
       "is_public": false,
       "createdAt": "2023-09-14T10:12:36.937Z",
       "updatedAt": null,
-      "deletedAt": null,
+      "deletedAt": "2023-09-15T07:54:30.341Z",
       "id": 15
     },
     {
@@ -207,6 +249,30 @@
       "updatedAt": "2023-09-14T10:13:17.948Z",
       "deletedAt": "2023-09-14T10:13:29.399Z",
       "id": 16
+    },
+    {
+      "user_id": 5,
+      "title": "Ratione sunt et qui",
+      "slug": "Ratione-sunt-et-qui",
+      "content": "<div>Iste rem possimus, r.</div>",
+      "image": null,
+      "is_public": true,
+      "createdAt": "2023-09-15T08:43:08.016Z",
+      "updatedAt": null,
+      "deletedAt": null,
+      "id": 18
+    },
+    {
+      "user_id": 8,
+      "title": "Perspiciatis offici",
+      "slug": "Perspiciatis-offici",
+      "content": "<div>Illum, provident, es.</div>",
+      "image": "image-1694767836436-36278651.jpg",
+      "is_public": true,
+      "createdAt": "2023-09-15T08:50:36.449Z",
+      "updatedAt": null,
+      "deletedAt": null,
+      "id": 19
     }
   ]
 }
