@@ -62,6 +62,13 @@
       "email": "naxizusogy@mailinator.com",
       "avatar": "image-1694787325071-885609180.png",
       "id": 9
+    },
+    {
+      "username": "zakaria",
+      "password": "$2b$10$pg4jd2G3C6M1hP7x9.sZVeIXMn69RaLIalaNNCFvhh6C0wtrQ/4va",
+      "email": "zak@gmail.com",
+      "avatar": "image-1694803937098-12560962.jpg",
+      "id": 10
     }
   ],
   "blogs": [
@@ -292,6 +299,30 @@
       "updatedAt": null,
       "deletedAt": null,
       "id": 20
+    },
+    {
+      "user_id": 10,
+      "title": "blog 1",
+      "slug": "blog-1",
+      "content": "<h1>content 1</h1><div><strong><em>text content<br><br></em></strong><br></div>",
+      "image": "image-1694803980548-250374004.jpg",
+      "is_public": true,
+      "createdAt": "2023-09-15T18:53:00.558Z",
+      "updatedAt": null,
+      "deletedAt": null,
+      "id": 21
+    },
+    {
+      "user_id": 10,
+      "title": "blog 22",
+      "slug": "blog-2",
+      "content": "<div>content 22</div>",
+      "image": "image-1694804009318-155094670.png",
+      "is_public": true,
+      "createdAt": "2023-09-15T18:53:29.352Z",
+      "updatedAt": "2023-09-15T18:53:38.341Z",
+      "deletedAt": "2023-09-15T18:54:24.852Z",
+      "id": 22
     }
   ]
 }
